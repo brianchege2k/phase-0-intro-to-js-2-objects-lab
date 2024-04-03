@@ -28,7 +28,7 @@ function destructivelyUpdateEmployeeWithKeyAndValue(obj,key,value){
     return obj;
 }
 
-const anotherEmployee = destructivelyUpdateEmployeeWithKeyAndValue(employee,'employeeName','Sam')
+let anotherEmployee = destructivelyUpdateEmployeeWithKeyAndValue(employee,'employeeName','Sam')
 
 
 console.log(anotherEmployee)
@@ -45,5 +45,20 @@ function deleteFromEmployeeByKey (obj,key){
 
 const anotherNewEmployee = deleteFromEmployeeByKey (employee,'streetAddress')
 
-console.log(anotherNewEmployee)
+console.log(anotherEmployee)
 
+
+
+function destructivelyDeleteFromEmployeeByKey(obj,key){
+
+    const newObj = delete obj[key]
+
+    return newObj;
+
+
+}
+
+
+const lastEmployee = destructivelyDeleteFromEmployeeByKey (employee,'employeeName')
+
+console.log(employee)
